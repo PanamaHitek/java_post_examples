@@ -15,7 +15,6 @@ public class JavaTX extends javax.swing.JFrame {
 
     //Se crea la instancia de la librería PanamaHitek_Arduino
     PanamaHitek_Arduino ino = new PanamaHitek_Arduino();
-
     public JavaTX() {
         initComponents();
         try {
