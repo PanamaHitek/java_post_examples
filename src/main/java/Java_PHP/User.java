@@ -1,5 +1,11 @@
 package Java_PHP;
 
+/**
+ * Clase que permite almacenar información y hacer transacciones con la base de
+ * datos
+ *
+ * @author Antony García
+ */
 public class User {
 
     private int id;
@@ -8,6 +14,14 @@ public class User {
     private String birthdate;
     private String gender;
 
+    /**
+     * Constructor de la clase
+     * @param id Identificación de fila en la tabla de la base de datos
+     * @param name Nombre
+     * @param lastName Apellido
+     * @param birthdate Fecha de cumpleaños
+     * @param gender Sexo
+     */
     public User(int id, String name, String lastName, String birthdate, String gender) {
         this.id = id;
         this.name = name;
@@ -16,7 +30,7 @@ public class User {
         this.gender = gender;
     }
 
-    public int getId() {
+     public int getId() {
         return id;
     }
 
