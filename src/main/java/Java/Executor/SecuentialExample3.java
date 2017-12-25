@@ -12,15 +12,19 @@ import java.util.logging.Logger;
  * @author Antony García González, de Proyecto Panama Hitek. Visita
  * http://panamahitek.com
  */
-public class SecuentialExample2 extends javax.swing.JFrame {
+public class SecuentialExample3 extends javax.swing.JFrame {
 
     PanamaHitek_DataBuffer buffer;
     PanamaHitek_TimeLineChart chart;
+    int red = 0;
+    int blue = 0;
+    int green = 0;
 
-    public SecuentialExample2() {
+    public SecuentialExample3() {
         initComponents();
         buildChart(); //Se construye la grafica
         //Se ejecutan las tareas
+
         task1();
         task2();
         task3();
@@ -50,37 +54,50 @@ public class SecuentialExample2 extends javax.swing.JFrame {
             //Se inserta la grafica en el panel
             chart.insertToPanel(jPanel1);
         } catch (Exception ex) {
-            Logger.getLogger(SecuentialExample2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SecuentialExample3.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public void task1() {
         for (int i = 0; i < 1000; i++) {
             try {
-                //Se agrega un dato al buffer en el indice 0
-                buffer.addValue(0, i);
+                /**
+                 * Se agrega un dato al buffer en los indices correspondientes a
+                 * cada color
+                 */
+                buffer.addValue(0, red);
+                buffer.addValue(1, blue);
+                buffer.addValue(2, green);
                 //Se imprime una fila en el buffer
                 buffer.printRow();
                 //Se detiene la ejecución durante un milisegundo
                 Thread.sleep(1);
+                //Se aumenta en una unidad el valor del color rojo
+                red++;
             } catch (Exception ex) {
-                Logger.getLogger(SecuentialExample2.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SecuentialExample3.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
 
-    
     public void task2() {
         for (int i = 0; i < 1000; i++) {
             try {
-                //Se agrega un dato al buffer en el indice 1
-                buffer.addValue(1, i);
+                /**
+                 * Se agrega un dato al buffer en los indices correspondientes a
+                 * cada color
+                 */
+                buffer.addValue(0, red);
+                buffer.addValue(1, blue);
+                buffer.addValue(2, green);
                 //Se imprime una fila en el buffer
                 buffer.printRow();
                 //Se detiene la ejecución durante un milisegundo
                 Thread.sleep(1);
+                //Se aumenta en una unidad el valor del color rojo
+                blue++;
             } catch (Exception ex) {
-                Logger.getLogger(SecuentialExample2.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SecuentialExample3.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -88,14 +105,21 @@ public class SecuentialExample2 extends javax.swing.JFrame {
     public void task3() {
         for (int i = 0; i < 1000; i++) {
             try {
-                //Se agrega un dato al buffer en el indice 2
-                buffer.addValue(2, i);
+                /**
+                 * Se agrega un dato al buffer en los indices correspondientes a
+                 * cada color
+                 */
+                buffer.addValue(0, red);
+                buffer.addValue(1, blue);
+                buffer.addValue(2, green);
                 //Se imprime una fila en el buffer
                 buffer.printRow();
                 //Se detiene la ejecución durante un milisegundo
                 Thread.sleep(1);
+                //Se aumenta en una unidad el valor del color rojo
+                green++;
             } catch (Exception ex) {
-                Logger.getLogger(SecuentialExample2.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SecuentialExample3.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -153,18 +177,18 @@ public class SecuentialExample2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SecuentialExample2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecuentialExample3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SecuentialExample2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecuentialExample3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SecuentialExample2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecuentialExample3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SecuentialExample2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SecuentialExample3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SecuentialExample2().setVisible(true);
+                new SecuentialExample3().setVisible(true);
             }
         });
     }
