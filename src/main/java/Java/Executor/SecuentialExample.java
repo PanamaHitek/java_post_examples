@@ -1,4 +1,4 @@
-package Java_Executor;
+package Java.Executor;
 
 /**
  * Ejemplo sobre ejecución de instrucciones de manera secuencial
@@ -32,3 +32,6 @@ public class SecuentialExample {
         }
     }
 }
+
+
+

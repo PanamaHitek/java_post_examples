@@ -1,4 +1,4 @@
-package Java_Executor;
+package Java.Executor;
 
 public class JavaExecutorExample1 {
 
