@@ -9,15 +9,19 @@ public class JavaExecutorExample1 {
         ExecutorService exec1 = Executors.newSingleThreadExecutor();
         exec1.submit(() -> {
             task1();
+            exec1.shutdown();
         });
         ExecutorService exec2 = Executors.newSingleThreadExecutor();
         exec2.submit(() -> {
             task2();
+            exec2.shutdown();
         });
         ExecutorService exec3 = Executors.newSingleThreadExecutor();
         exec3.submit(() -> {
-            task3(); 
+            task3();
+            exec3.shutdown();
         });
+
     }
 
     public static void task1() {
@@ -36,6 +40,6 @@ public class JavaExecutorExample1 {
         for (int i = 0; i < 3; i++) {
             System.out.println("Task 3: " + i);
         }
-    }  
-    
+    }
+
 }

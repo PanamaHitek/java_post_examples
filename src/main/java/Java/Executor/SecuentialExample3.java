@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Ejemplo sobre ejecución de instrucciones de manera secuencial
+ * Ejemplo sobre ejecución de instrucciones de manera asincrona
  *
  * @author Antony García González, de Proyecto Panama Hitek. Visita
  * http://panamahitek.com
