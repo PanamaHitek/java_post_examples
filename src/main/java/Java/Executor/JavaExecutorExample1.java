@@ -25,19 +25,19 @@ public class JavaExecutorExample1 {
     }
 
     public static void task1() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 30; i++) {
             System.out.println("Task 1: " + i);
         }
     }
 
     public static void task2() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 30; i++) {
             System.out.println("Task 2: " + i);
         }
     }
 
     public static void task3() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 30; i++) {
             System.out.println("Task 3: " + i);
         }
     }
