@@ -1,4 +1,4 @@
-package Java.Executor;
+package Java_Executor;
 
 /**
  * Ejemplo sobre ejecución de instrucciones de manera secuencial
