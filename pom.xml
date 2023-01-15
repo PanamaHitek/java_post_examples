@@ -10,21 +10,26 @@
         <dependency>
             <groupId>com.github.PanamaHitek</groupId>
             <artifactId>PanamaHitek_Arduino</artifactId>
-            <version>3.0.0</version>
-        </dependency>
+            <version>3.2.0</version>
+        </dependency>        
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
-    </dependencies>
-    
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>31.1-jre</version>
+        </dependency> 
+    </dependencies>    
+   
     <repositories>
         <repository>
             <id>jitpack.io</id>
-            <url>http://jitpack.io</url>
+            <url>https://jitpack.io</url>
         </repository>
-    </repositories>
+    </repositories>  
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
